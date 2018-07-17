@@ -383,4 +383,16 @@ admin.persistentTopics().getSubscriptions(destination);
 String subscriptionName = <span class="hljs-string">"my-subscription"</span>;
 admin.persistentTopics().deleteSubscription(destination, subscriptionName);
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#persistent-topics-resources">Persistent topics resources</a><ul class="toc-headings"><li><a href="#list-of-topics">List of topics</a></li><li><a href="#grant-permission">Grant permission</a></li><li><a href="#get-permission">Get permission</a></li><li><a href="#revoke-permission">Revoke permission</a></li><li><a href="#delete-topic">Delete topic</a></li><li><a href="#unload-topic">Unload topic</a></li><li><a href="#get-stats">Get stats</a></li><li><a href="#get-internal-stats">Get internal stats</a></li><li><a href="#peek-messages">Peek messages</a></li><li><a href="#skip-messages">Skip messages</a></li><li><a href="#skip-all-messages">Skip all messages</a></li><li><a href="#reset-cursor">Reset cursor</a></li><li><a href="#lookup-of-topic">Lookup of topic</a></li><li><a href="#get-bundle">Get bundle</a></li><li><a href="#get-subscriptions">Get subscriptions</a></li><li><a href="#unsubscribe">Unsubscribe</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#persistent-topics-resources">Persistent topics resources</a><ul class="toc-headings"><li><a href="#list-of-topics">List of topics</a></li><li><a href="#grant-permission">Grant permission</a></li><li><a href="#get-permission">Get permission</a></li><li><a href="#revoke-permission">Revoke permission</a></li><li><a href="#delete-topic">Delete topic</a></li><li><a href="#unload-topic">Unload topic</a></li><li><a href="#get-stats">Get stats</a></li><li><a href="#get-internal-stats">Get internal stats</a></li><li><a href="#peek-messages">Peek messages</a></li><li><a href="#skip-messages">Skip messages</a></li><li><a href="#skip-all-messages">Skip all messages</a></li><li><a href="#reset-cursor">Reset cursor</a></li><li><a href="#lookup-of-topic">Lookup of topic</a></li><li><a href="#get-bundle">Get bundle</a></li><li><a href="#get-subscriptions">Get subscriptions</a></li><li><a href="#unsubscribe">Unsubscribe</a></li></ul></li></ul></nav></div><div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section></footer><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.foo = new Pjax({
+            areas: [
+              // try to use the first query.
+              '.mainContainer, .docsNavContainer .toc .navWrapper, .onPageNav',
+              // fallback
+              'body'
+            ],
+            link: '.docsNavContainer:not(.docsSliderActive) a',
+            update: {
+              script: false,
+            }
+          });
+        </script></span></div></div></body></html>

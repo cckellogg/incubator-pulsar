@@ -6,4 +6,16 @@
         });
         </script><link rel="stylesheet" href="/incubator-pulsar/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/incubator-pulsar/"><img class="logo" src="/incubator-pulsar/img/pulsar.svg" alt="Apache Pulsar"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/incubator-pulsar/docs/standalone" target="_self">Documentation</a></li><li class=""><a href="/incubator-pulsar/en/download" target="_self">Download</a></li><li class=""><a href="/incubator-pulsar/docs/client-libraries" target="_self">Client libraries</a></li><li class=""><a href="#community" target="_self">Community</a></li><li class=""><a href="#apache" target="_self">Apache</a></li><li class=""><a target="_self"></a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/apache/incubator-pulsar/blob/master/site2/docs/developing-codebase.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">The Pulsar codebase</h1></header><article><div><span><p>The panels below describe some of the core directories in the <a href="https://github.com/apache/incubator-pulsar">Pulsar codebase</a>.</p>
 <p>{% include codebase.html %}</p>
-</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section></footer><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.foo = new Pjax({
+            areas: [
+              // try to use the first query.
+              '.mainContainer, .docsNavContainer .toc .navWrapper, .onPageNav',
+              // fallback
+              'body'
+            ],
+            link: '.docsNavContainer:not(.docsSliderActive) a',
+            update: {
+              script: false,
+            }
+          });
+        </script></span></div></div></body></html>

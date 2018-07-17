@@ -82,4 +82,16 @@ in place. This is enabled by default when deploying Pulsar on Kubernetes.</p>
         -e PROMETHEUS_URL=http://$PROMETHEUS_HOST:9090/ \
         apachepulsar/pulsar-grafana:latest
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/deploy-dcos">← Deploying Pulsar on DC/OS</a><a class="docs-next button" href="/incubator-pulsar/docs/administration-zk-bk">ZooKeeper and BookKeeper administration →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#collecting-metrics">Collecting metrics</a><ul class="toc-headings"><li><a href="#broker-stats">Broker stats</a></li><li><a href="#zookeeper-stats">ZooKeeper stats</a></li><li><a href="#bookkeeper-stats">BookKeeper stats</a></li></ul></li><li><a href="#configuring-prometheus">Configuring Prometheus</a></li><li><a href="#dashboards">Dashboards</a><ul class="toc-headings"><li><a href="#pulsar-per-topic-dashboard">Pulsar per-topic dashboard</a></li><li><a href="#grafana">Grafana</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/deploy-dcos">← Deploying Pulsar on DC/OS</a><a class="docs-next button" href="/incubator-pulsar/docs/administration-zk-bk">ZooKeeper and BookKeeper administration →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#collecting-metrics">Collecting metrics</a><ul class="toc-headings"><li><a href="#broker-stats">Broker stats</a></li><li><a href="#zookeeper-stats">ZooKeeper stats</a></li><li><a href="#bookkeeper-stats">BookKeeper stats</a></li></ul></li><li><a href="#configuring-prometheus">Configuring Prometheus</a></li><li><a href="#dashboards">Dashboards</a><ul class="toc-headings"><li><a href="#pulsar-per-topic-dashboard">Pulsar per-topic dashboard</a></li><li><a href="#grafana">Grafana</a></li></ul></li></ul></nav></div><div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section></footer><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.foo = new Pjax({
+            areas: [
+              // try to use the first query.
+              '.mainContainer, .docsNavContainer .toc .navWrapper, .onPageNav',
+              // fallback
+              'body'
+            ],
+            link: '.docsNavContainer:not(.docsSliderActive) a',
+            update: {
+              script: false,
+            }
+          });
+        </script></span></div></div></body></html>
