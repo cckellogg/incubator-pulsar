@@ -3,7 +3,7 @@
 window.addEventListener('load', function() {
 
   // setup apache menu items in nav bar
-  const community = document.querySelector("a[href='#community']").parentNode;
+  /*const community = document.querySelector("a[href='#community']").parentNode;
   const communityMenu = 
     '<li>' +
     '<a id="community-menu" href="#">Community</a>' + 
@@ -32,7 +32,7 @@ window.addEventListener('load', function() {
     } else {
       communityDropDown.className = 'hide';
     }
-  });
+  });*/
 
   // setup apache menu items in nav bar
   const apache = document.querySelector("a[href='#apache']").parentNode;

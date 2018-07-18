@@ -190,7 +190,38 @@ admin.nonPersistentTopics().getPartitionedTopicMetadata(topicName);
 <pre><code class="hljs css languages- java">String destination = <span class="hljs-string">"non-persistent://my-tenantmy-namespace/my-topic"</span>;
 admin.nonPersistentTopics().unload(destination);
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/admin-api-permissions">← Managing permissions</a><a class="docs-next button" href="/incubator-pulsar/docs/admin-api-partitioned-topics">Managing partitioned topics →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#non-persistent-topics-resources">Non-persistent topics resources</a><ul class="toc-headings"><li><a href="#get-stats">Get stats</a></li><li><a href="#get-internal-stats">Get internal stats</a></li><li><a href="#create-partitioned-topic">Create partitioned topic</a></li><li><a href="#get-metadata">Get metadata</a></li><li><a href="#unload-topic">Unload topic</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/admin-api-permissions">← Managing permissions</a><a class="docs-next button" href="/incubator-pulsar/docs/admin-api-partitioned-topics">Managing partitioned topics →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#non-persistent-topics-resources">Non-persistent topics resources</a><ul class="toc-headings"><li><a href="#get-stats">Get stats</a></li><li><a href="#get-internal-stats">Get internal stats</a></li><li><a href="#create-partitioned-topic">Create partitioned topic</a></li><li><a href="#get-metadata">Get metadata</a></li><li><a href="#unload-topic">Unload topic</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script>
+      const community = document.querySelector("a[href='#community']").parentNode;
+      const communityMenu = 
+        '<li>' +
+        '<a id="community-menu" href="#">Community</a>' + 
+        '<div id="community-dropdown" class="hide">' +
+          '<ul id="community-dropdown-items">' +
+            '<li><a href="/incubator-pulsar/contact">Contant</a></li>' +
+            '<li><a href="/incubator-pulsar/events">Events</a></li>' +
+            '<li><a href="https://twitter.com/Apache_Pulsar">Twitter</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/wiki">Wiki</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/issues">Issue tracking</a></li>' +
+            '<li><a href="/incubator-pulsar/resources">Resources</a></li>' +
+            '<li><a href="/incubator-pulsar/team">Team</a></li>' +
+          '</ul>' +
+        '</div>' +
+        '</li>';
+
+      community.innerHTML = communityMenu;
+
+      const communityMenuItem = document.getElementById("community-menu");
+      const communityDropDown = document.getElementById("community-dropdown");
+      communityMenuItem.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        if (communityDropDown.className == 'hide') {
+          communityDropDown.className = 'visible';
+        } else {
+          communityDropDown.className = 'hide';
+        }
+      });
+    </script></span><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
             areas: [
               // try to use the first query.
               '.mainContainer, .docsNavContainer .toc .navWrapper, .onPageNav',

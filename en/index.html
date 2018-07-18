@@ -20,7 +20,38 @@
 </span></div></div></div><div class="blockElement alignCenter threeByGridBlock"><div class="blockContent"><h2><div><span><p><a href="/incubator-pulsar/docs/admin-api-overview">Operability</a></p>
 </span></div></h2><div><span><p>REST Admin API for provisioning, administration, tools and monitoring. Deploy on bare metal or Kubernetes.</p>
 </span></div></div></div></div></div></div><div class="container"><div class="wrapper"><div class="Block" style="text-align:center"><div class="" style="align-items:center;margin:auto"><img src="/incubator-pulsar/img/apache_incubator.png"/></div><div><span><p>Apache Pulsar is an effort undergoing incubation at The <a href="http://www.apache.org">Apache Software Foundation (ASF)</a> sponsored by the Apache Incubator PMC. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF. Apache Pulsar (incubating) is available under the <a href="https://www.apache.org/licenses">Apache License, version 2.0</a>.</p>
-</span></div></div></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
+</span></div></div></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script>
+      const community = document.querySelector("a[href='#community']").parentNode;
+      const communityMenu = 
+        '<li>' +
+        '<a id="community-menu" href="#">Community</a>' + 
+        '<div id="community-dropdown" class="hide">' +
+          '<ul id="community-dropdown-items">' +
+            '<li><a href="/incubator-pulsar/contact">Contant</a></li>' +
+            '<li><a href="/incubator-pulsar/events">Events</a></li>' +
+            '<li><a href="https://twitter.com/Apache_Pulsar">Twitter</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/wiki">Wiki</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/issues">Issue tracking</a></li>' +
+            '<li><a href="/incubator-pulsar/resources">Resources</a></li>' +
+            '<li><a href="/incubator-pulsar/team">Team</a></li>' +
+          '</ul>' +
+        '</div>' +
+        '</li>';
+
+      community.innerHTML = communityMenu;
+
+      const communityMenuItem = document.getElementById("community-menu");
+      const communityDropDown = document.getElementById("community-dropdown");
+      communityMenuItem.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        if (communityDropDown.className == 'hide') {
+          communityDropDown.className = 'visible';
+        } else {
+          communityDropDown.className = 'hide';
+        }
+      });
+    </script></span><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
             areas: [
               // try to use the first query.
               '.mainContainer, .docsNavContainer .toc .navWrapper, .onPageNav',

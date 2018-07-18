@@ -200,7 +200,38 @@ This <span class="hljs-keyword">function</span> <span class="hljs-title">has</sp
 </ul>
 <p>Pulsar Functions can also be assigned a subscription type when you <a href="#cluster-mode">create</a> them or run them <a href="#local-run">locally</a>. In cluster mode, the subscription can also be <a href="#updating">updated</a> after the function has been created.
 --&gt;</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/functions-api">← The Pulsar Functions API</a><a class="docs-next button" href="/incubator-pulsar/docs/functions-guarantees">Processing guarantees →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#requirements">Requirements</a></li><li><a href="#command-line-interface">Command-line interface</a><ul class="toc-headings"><li><a href="#fully-qualified-function-name-fqfn">Fully Qualified Function Name (FQFN)</a></li><li><a href="#default-arguments">Default arguments</a></li></ul></li><li><a href="#local-run-mode">Local run mode</a></li><li><a href="#cluster-mode">Cluster mode</a><ul class="toc-headings"><li><a href="#updating-cluster-mode-functions">Updating cluster mode functions</a></li><li><a href="#parallelism">Parallelism</a></li><li><a href="#function-instance-resources">Function instance resources</a></li></ul></li><li><a href="#triggering-pulsar-functions">Triggering Pulsar Functions</a></li><li><a href="#subscription-types">Subscription types</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/functions-api">← The Pulsar Functions API</a><a class="docs-next button" href="/incubator-pulsar/docs/functions-guarantees">Processing guarantees →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#requirements">Requirements</a></li><li><a href="#command-line-interface">Command-line interface</a><ul class="toc-headings"><li><a href="#fully-qualified-function-name-fqfn">Fully Qualified Function Name (FQFN)</a></li><li><a href="#default-arguments">Default arguments</a></li></ul></li><li><a href="#local-run-mode">Local run mode</a></li><li><a href="#cluster-mode">Cluster mode</a><ul class="toc-headings"><li><a href="#updating-cluster-mode-functions">Updating cluster mode functions</a></li><li><a href="#parallelism">Parallelism</a></li><li><a href="#function-instance-resources">Function instance resources</a></li></ul></li><li><a href="#triggering-pulsar-functions">Triggering Pulsar Functions</a></li><li><a href="#subscription-types">Subscription types</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script>
+      const community = document.querySelector("a[href='#community']").parentNode;
+      const communityMenu = 
+        '<li>' +
+        '<a id="community-menu" href="#">Community</a>' + 
+        '<div id="community-dropdown" class="hide">' +
+          '<ul id="community-dropdown-items">' +
+            '<li><a href="/incubator-pulsar/contact">Contant</a></li>' +
+            '<li><a href="/incubator-pulsar/events">Events</a></li>' +
+            '<li><a href="https://twitter.com/Apache_Pulsar">Twitter</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/wiki">Wiki</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/issues">Issue tracking</a></li>' +
+            '<li><a href="/incubator-pulsar/resources">Resources</a></li>' +
+            '<li><a href="/incubator-pulsar/team">Team</a></li>' +
+          '</ul>' +
+        '</div>' +
+        '</li>';
+
+      community.innerHTML = communityMenu;
+
+      const communityMenuItem = document.getElementById("community-menu");
+      const communityDropDown = document.getElementById("community-dropdown");
+      communityMenuItem.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        if (communityDropDown.className == 'hide') {
+          communityDropDown.className = 'visible';
+        } else {
+          communityDropDown.className = 'hide';
+        }
+      });
+    </script></span><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
             areas: [
               // try to use the first query.
               '.mainContainer, .docsNavContainer .toc .navWrapper, .onPageNav',

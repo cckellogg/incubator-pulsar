@@ -603,7 +603,38 @@ String wotd = context.getUserConfigValueOrDefault(<span class="hljs-string">"wor
         <span class="hljs-keyword">if</span> input == <span class="hljs-number">11</span>:
             context.record_metric(<span class="hljs-string">'elevens-count'</span>, <span class="hljs-number">1</span>)
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/functions-quickstart">← Getting started with Pulsar Functions</a><a class="docs-next button" href="/incubator-pulsar/docs/functions-deploying">Deploying and managing Pulsar Functions →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#core-programming-model">Core programming model</a><ul class="toc-headings"><li><a href="#example-function">Example function</a></li><li><a href="#example-deployment">Example deployment</a></li><li><a href="#available-apis">Available APIs</a></li><li><a href="#serialization-and-deserialization-serde">Serialization and deserialization (SerDe)</a></li><li><a href="#context">Context</a></li><li><a href="#user-config">User config</a></li></ul></li><li><a href="#functions-for-java">Functions for Java</a><ul class="toc-headings"><li><a href="#getting-started">Getting started</a></li><li><a href="#java-native-functions">Java native functions</a></li><li><a href="#java-sdk-functions">Java SDK functions</a></li><li><a href="#java-context-object">Java context object</a></li><li><a href="#void-functions">Void functions</a></li><li><a href="#java-serde">Java SerDe</a></li><li><a href="#java-logging">Java logging</a></li><li><a href="#java-user-config">Java user config</a></li><li><a href="#java-metrics">Java metrics</a></li></ul></li><li><a href="#functions-for-python">Functions for Python</a><ul class="toc-headings"><li><a href="#getting-started-1">Getting started</a></li><li><a href="#packaging-1">Packaging</a></li><li><a href="#python-native-functions">Python native functions</a></li><li><a href="#python-sdk-functions">Python SDK functions</a></li><li><a href="#python-serde">Python SerDe</a></li><li><a href="#python-logging">Python logging</a></li><li><a href="#python-user-config">Python user config</a></li><li><a href="#python-metrics">Python metrics</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/functions-quickstart">← Getting started with Pulsar Functions</a><a class="docs-next button" href="/incubator-pulsar/docs/functions-deploying">Deploying and managing Pulsar Functions →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#core-programming-model">Core programming model</a><ul class="toc-headings"><li><a href="#example-function">Example function</a></li><li><a href="#example-deployment">Example deployment</a></li><li><a href="#available-apis">Available APIs</a></li><li><a href="#serialization-and-deserialization-serde">Serialization and deserialization (SerDe)</a></li><li><a href="#context">Context</a></li><li><a href="#user-config">User config</a></li></ul></li><li><a href="#functions-for-java">Functions for Java</a><ul class="toc-headings"><li><a href="#getting-started">Getting started</a></li><li><a href="#java-native-functions">Java native functions</a></li><li><a href="#java-sdk-functions">Java SDK functions</a></li><li><a href="#java-context-object">Java context object</a></li><li><a href="#void-functions">Void functions</a></li><li><a href="#java-serde">Java SerDe</a></li><li><a href="#java-logging">Java logging</a></li><li><a href="#java-user-config">Java user config</a></li><li><a href="#java-metrics">Java metrics</a></li></ul></li><li><a href="#functions-for-python">Functions for Python</a><ul class="toc-headings"><li><a href="#getting-started-1">Getting started</a></li><li><a href="#packaging-1">Packaging</a></li><li><a href="#python-native-functions">Python native functions</a></li><li><a href="#python-sdk-functions">Python SDK functions</a></li><li><a href="#python-serde">Python SerDe</a></li><li><a href="#python-logging">Python logging</a></li><li><a href="#python-user-config">Python user config</a></li><li><a href="#python-metrics">Python metrics</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script>
+      const community = document.querySelector("a[href='#community']").parentNode;
+      const communityMenu = 
+        '<li>' +
+        '<a id="community-menu" href="#">Community</a>' + 
+        '<div id="community-dropdown" class="hide">' +
+          '<ul id="community-dropdown-items">' +
+            '<li><a href="/incubator-pulsar/contact">Contant</a></li>' +
+            '<li><a href="/incubator-pulsar/events">Events</a></li>' +
+            '<li><a href="https://twitter.com/Apache_Pulsar">Twitter</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/wiki">Wiki</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/issues">Issue tracking</a></li>' +
+            '<li><a href="/incubator-pulsar/resources">Resources</a></li>' +
+            '<li><a href="/incubator-pulsar/team">Team</a></li>' +
+          '</ul>' +
+        '</div>' +
+        '</li>';
+
+      community.innerHTML = communityMenu;
+
+      const communityMenuItem = document.getElementById("community-menu");
+      const communityDropDown = document.getElementById("community-dropdown");
+      communityMenuItem.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        if (communityDropDown.className == 'hide') {
+          communityDropDown.className = 'visible';
+        } else {
+          communityDropDown.className = 'hide';
+        }
+      });
+    </script></span><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
             areas: [
               // try to use the first query.
               '.mainContainer, .docsNavContainer .toc .navWrapper, .onPageNav',

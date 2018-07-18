@@ -112,7 +112,38 @@ null
 
 Reason: Error offloading: org.apache.bookkeeper.mledger.ManagedLedgerException: java.util.concurrent.CompletionException: com.amazonaws.services.s3.model.AmazonS3Exception: Anonymous users cannot initiate multipart uploads.  Please authenticate. (Service: Amazon S3; Status Code: 403; Error Code: AccessDenied; Request ID: 798758DE3F1776DF; S3 Extended Request ID: dhBFz/lZm1oiG/oBEepeNlhrtsDlzoOhocuYMpKihQGXe6EG8puRGOkK6UwqzVrMXTWBxxHcS+g=), S3 Extended Request ID: dhBFz/lZm1oiG/oBEepeNlhrtsDlzoOhocuYMpKihQGXe6EG8puRGOkK6UwqzVrMXTWBxxHcS+g=
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/adaptors-storm">← Pulsar adaptor for Apache Storm</a><a class="docs-next button" href="/incubator-pulsar/docs/cookbooks-compaction">Topic compaction →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#when-should-i-use-tiered-storage">When should I use Tiered Storage?</a></li><li><a href="#the-offloading-mechanism">The offloading mechanism</a></li><li><a href="#amazon-s3">Amazon S3</a><ul class="toc-headings"><li><a href="#configuring-the-broker">Configuring the broker</a></li><li><a href="#authenticating-with-s3">Authenticating with S3</a></li></ul></li><li><a href="#configuring-offload-to-run-automatically">Configuring offload to run automatically</a></li><li><a href="#triggering-offload-manually">Triggering offload manually</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/adaptors-storm">← Pulsar adaptor for Apache Storm</a><a class="docs-next button" href="/incubator-pulsar/docs/cookbooks-compaction">Topic compaction →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#when-should-i-use-tiered-storage">When should I use Tiered Storage?</a></li><li><a href="#the-offloading-mechanism">The offloading mechanism</a></li><li><a href="#amazon-s3">Amazon S3</a><ul class="toc-headings"><li><a href="#configuring-the-broker">Configuring the broker</a></li><li><a href="#authenticating-with-s3">Authenticating with S3</a></li></ul></li><li><a href="#configuring-offload-to-run-automatically">Configuring offload to run automatically</a></li><li><a href="#triggering-offload-manually">Triggering offload manually</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script>
+      const community = document.querySelector("a[href='#community']").parentNode;
+      const communityMenu = 
+        '<li>' +
+        '<a id="community-menu" href="#">Community</a>' + 
+        '<div id="community-dropdown" class="hide">' +
+          '<ul id="community-dropdown-items">' +
+            '<li><a href="/incubator-pulsar/contact">Contant</a></li>' +
+            '<li><a href="/incubator-pulsar/events">Events</a></li>' +
+            '<li><a href="https://twitter.com/Apache_Pulsar">Twitter</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/wiki">Wiki</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/issues">Issue tracking</a></li>' +
+            '<li><a href="/incubator-pulsar/resources">Resources</a></li>' +
+            '<li><a href="/incubator-pulsar/team">Team</a></li>' +
+          '</ul>' +
+        '</div>' +
+        '</li>';
+
+      community.innerHTML = communityMenu;
+
+      const communityMenuItem = document.getElementById("community-menu");
+      const communityDropDown = document.getElementById("community-dropdown");
+      communityMenuItem.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        if (communityDropDown.className == 'hide') {
+          communityDropDown.className = 'visible';
+        } else {
+          communityDropDown.className = 'hide';
+        }
+      });
+    </script></span><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
             areas: [
               // try to use the first query.
               '.mainContainer, .docsNavContainer .toc .navWrapper, .onPageNav',

@@ -567,7 +567,38 @@ The table below lists the environment variables that you can use to configure th
 <p>Example</p>
 <pre><code class="hljs css languages- bash">$ bookkeeper shell bookiesanity
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/reference-rest-api">← Pulsar binary protocol specification</a><a class="docs-next button" href="/incubator-pulsar/docs/pulsar-admin">Pulsar admin CLI →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#pulsar"><code>pulsar</code></a><ul class="toc-headings"><li><a href="#bookie"><code>bookie</code></a></li><li><a href="#broker"><code>broker</code></a></li><li><a href="#compact-topic"><code>compact-topic</code></a></li><li><a href="#discovery"><code>discovery</code></a></li><li><a href="#configuration-store"><code>configuration-store</code></a></li><li><a href="#initialize-cluster-metadata"><code>initialize-cluster-metadata</code></a></li><li><a href="#proxy"><code>proxy</code></a></li><li><a href="#standalone"><code>standalone</code></a></li><li><a href="#websocket"><code>websocket</code></a></li><li><a href="#zookeeper"><code>zookeeper</code></a></li><li><a href="#zookeeper-shell"><code>zookeeper-shell</code></a></li></ul></li><li><a href="#pulsar-client"><code>pulsar-client</code></a><ul class="toc-headings"><li><a href="#produce"><code>produce</code></a></li><li><a href="#consume"><code>consume</code></a></li></ul></li><li><a href="#pulsar-daemon"><code>pulsar-daemon</code></a><ul class="toc-headings"><li><a href="#start"><code>start</code></a></li><li><a href="#stop"><code>stop</code></a></li></ul></li><li><a href="#pulsar-perf"><code>pulsar-perf</code></a><ul class="toc-headings"><li><a href="#consume-1"><code>consume</code></a></li><li><a href="#produce-1"><code>produce</code></a></li><li><a href="#monitor-brokers"><code>monitor-brokers</code></a></li><li><a href="#simulation-client"><code>simulation-client</code></a></li><li><a href="#simulation-controller"><code>simulation-controller</code></a></li></ul></li><li><a href="#bookkeeper"><code>bookkeeper</code></a><ul class="toc-headings"><li><a href="#auto-recovery"><code>auto-recovery</code></a></li><li><a href="#bookie-1"><code>bookie</code></a></li><li><a href="#localbookie"><code>localbookie</code></a></li><li><a href="#upgrade"><code>upgrade</code></a></li><li><a href="#shell"><code>shell</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/reference-rest-api">← Pulsar binary protocol specification</a><a class="docs-next button" href="/incubator-pulsar/docs/pulsar-admin">Pulsar admin CLI →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#pulsar"><code>pulsar</code></a><ul class="toc-headings"><li><a href="#bookie"><code>bookie</code></a></li><li><a href="#broker"><code>broker</code></a></li><li><a href="#compact-topic"><code>compact-topic</code></a></li><li><a href="#discovery"><code>discovery</code></a></li><li><a href="#configuration-store"><code>configuration-store</code></a></li><li><a href="#initialize-cluster-metadata"><code>initialize-cluster-metadata</code></a></li><li><a href="#proxy"><code>proxy</code></a></li><li><a href="#standalone"><code>standalone</code></a></li><li><a href="#websocket"><code>websocket</code></a></li><li><a href="#zookeeper"><code>zookeeper</code></a></li><li><a href="#zookeeper-shell"><code>zookeeper-shell</code></a></li></ul></li><li><a href="#pulsar-client"><code>pulsar-client</code></a><ul class="toc-headings"><li><a href="#produce"><code>produce</code></a></li><li><a href="#consume"><code>consume</code></a></li></ul></li><li><a href="#pulsar-daemon"><code>pulsar-daemon</code></a><ul class="toc-headings"><li><a href="#start"><code>start</code></a></li><li><a href="#stop"><code>stop</code></a></li></ul></li><li><a href="#pulsar-perf"><code>pulsar-perf</code></a><ul class="toc-headings"><li><a href="#consume-1"><code>consume</code></a></li><li><a href="#produce-1"><code>produce</code></a></li><li><a href="#monitor-brokers"><code>monitor-brokers</code></a></li><li><a href="#simulation-client"><code>simulation-client</code></a></li><li><a href="#simulation-controller"><code>simulation-controller</code></a></li></ul></li><li><a href="#bookkeeper"><code>bookkeeper</code></a><ul class="toc-headings"><li><a href="#auto-recovery"><code>auto-recovery</code></a></li><li><a href="#bookie-1"><code>bookie</code></a></li><li><a href="#localbookie"><code>localbookie</code></a></li><li><a href="#upgrade"><code>upgrade</code></a></li><li><a href="#shell"><code>shell</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script>
+      const community = document.querySelector("a[href='#community']").parentNode;
+      const communityMenu = 
+        '<li>' +
+        '<a id="community-menu" href="#">Community</a>' + 
+        '<div id="community-dropdown" class="hide">' +
+          '<ul id="community-dropdown-items">' +
+            '<li><a href="/incubator-pulsar/contact">Contant</a></li>' +
+            '<li><a href="/incubator-pulsar/events">Events</a></li>' +
+            '<li><a href="https://twitter.com/Apache_Pulsar">Twitter</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/wiki">Wiki</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/issues">Issue tracking</a></li>' +
+            '<li><a href="/incubator-pulsar/resources">Resources</a></li>' +
+            '<li><a href="/incubator-pulsar/team">Team</a></li>' +
+          '</ul>' +
+        '</div>' +
+        '</li>';
+
+      community.innerHTML = communityMenu;
+
+      const communityMenuItem = document.getElementById("community-menu");
+      const communityDropDown = document.getElementById("community-dropdown");
+      communityMenuItem.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        if (communityDropDown.className == 'hide') {
+          communityDropDown.className = 'visible';
+        } else {
+          communityDropDown.className = 'hide';
+        }
+      });
+    </script></span><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
             areas: [
               // try to use the first query.
               '.mainContainer, .docsNavContainer .toc .navWrapper, .onPageNav',

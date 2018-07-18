@@ -286,7 +286,38 @@ for messages:</p>
 <p>To report the topic stats:</p>
 <pre><code class="hljs css languages- shell"><span class="hljs-meta">$</span><span class="bash"> bin/pulsar-admin persistent stats persistent://<span class="hljs-built_in">test</span>-tenant/us-west/ns1/my-topic</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/deploy-bare-metal">← Deploying a cluster on bare metal</a><a class="docs-next button" href="/incubator-pulsar/docs/deploy-dcos">Deploying Pulsar on DC/OS →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#system-requirement">System requirement</a></li><li><a href="#installing-pulsar">Installing Pulsar</a></li><li><a href="#what-your-package-contains">What your package contains</a></li><li><a href="#deploying-zookeeper">Deploying ZooKeeper</a><ul class="toc-headings"><li><a href="#deploying-local-zookeeper">Deploying local ZooKeeper</a></li><li><a href="#deploying-the-configuration-store">Deploying the configuration store</a></li></ul></li><li><a href="#cluster-metadata-initialization">Cluster metadata initialization</a></li><li><a href="#deploying-bookkeeper">Deploying BookKeeper</a><ul class="toc-headings"><li><a href="#configuring-bookies">Configuring bookies</a></li><li><a href="#starting-up-bookies">Starting up bookies</a></li><li><a href="#hardware-considerations">Hardware considerations</a></li></ul></li><li><a href="#deploying-brokers">Deploying brokers</a><ul class="toc-headings"><li><a href="#broker-configuration">Broker configuration</a></li><li><a href="#broker-hardware">Broker hardware</a></li><li><a href="#starting-the-broker-service">Starting the broker service</a></li></ul></li><li><a href="#service-discovery">Service discovery</a><ul class="toc-headings"><li><a href="#service-discovery-setup">Service discovery setup</a></li></ul></li><li><a href="#admin-client-and-verification">Admin client and verification</a></li><li><a href="#provisioning-new-tenants">Provisioning new tenants</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/incubator-pulsar/docs/deploy-bare-metal">← Deploying a cluster on bare metal</a><a class="docs-next button" href="/incubator-pulsar/docs/deploy-dcos">Deploying Pulsar on DC/OS →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#system-requirement">System requirement</a></li><li><a href="#installing-pulsar">Installing Pulsar</a></li><li><a href="#what-your-package-contains">What your package contains</a></li><li><a href="#deploying-zookeeper">Deploying ZooKeeper</a><ul class="toc-headings"><li><a href="#deploying-local-zookeeper">Deploying local ZooKeeper</a></li><li><a href="#deploying-the-configuration-store">Deploying the configuration store</a></li></ul></li><li><a href="#cluster-metadata-initialization">Cluster metadata initialization</a></li><li><a href="#deploying-bookkeeper">Deploying BookKeeper</a><ul class="toc-headings"><li><a href="#configuring-bookies">Configuring bookies</a></li><li><a href="#starting-up-bookies">Starting up bookies</a></li><li><a href="#hardware-considerations">Hardware considerations</a></li></ul></li><li><a href="#deploying-brokers">Deploying brokers</a><ul class="toc-headings"><li><a href="#broker-configuration">Broker configuration</a></li><li><a href="#broker-hardware">Broker hardware</a></li><li><a href="#starting-the-broker-service">Starting the broker service</a></li></ul></li><li><a href="#service-discovery">Service discovery</a><ul class="toc-headings"><li><a href="#service-discovery-setup">Service discovery setup</a></li></ul></li><li><a href="#admin-client-and-verification">Admin client and verification</a></li><li><a href="#provisioning-new-tenants">Provisioning new tenants</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 The Apache Software Foundation. All Rights Reserved. Apache, Apache Pulsar and the Apache feather logo are trademarks of The Apache Software Foundation.</section><span><script>
+      const community = document.querySelector("a[href='#community']").parentNode;
+      const communityMenu = 
+        '<li>' +
+        '<a id="community-menu" href="#">Community</a>' + 
+        '<div id="community-dropdown" class="hide">' +
+          '<ul id="community-dropdown-items">' +
+            '<li><a href="/incubator-pulsar/contact">Contant</a></li>' +
+            '<li><a href="/incubator-pulsar/events">Events</a></li>' +
+            '<li><a href="https://twitter.com/Apache_Pulsar">Twitter</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/wiki">Wiki</a></li>' +
+            '<li><a href="https://github.com/apache/incubator-pulsar/issues">Issue tracking</a></li>' +
+            '<li><a href="/incubator-pulsar/resources">Resources</a></li>' +
+            '<li><a href="/incubator-pulsar/team">Team</a></li>' +
+          '</ul>' +
+        '</div>' +
+        '</li>';
+
+      community.innerHTML = communityMenu;
+
+      const communityMenuItem = document.getElementById("community-menu");
+      const communityDropDown = document.getElementById("community-dropdown");
+      communityMenuItem.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        if (communityDropDown.className == 'hide') {
+          communityDropDown.className = 'visible';
+        } else {
+          communityDropDown.className = 'hide';
+        }
+      });
+    </script></span><span><script src="/incubator-pulsar/js/pjax-api.min.js"></script><script>window.navfoo = new Pjax({
             areas: [
               // try to use the first query.
               '.mainContainer, .docsNavContainer .toc .navWrapper, .onPageNav',
