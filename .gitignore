@@ -38,6 +38,9 @@ target/
 # Python
 *.pyc
 
+# Django stuff
+*.sqlite3
+
 # Perf tools
 *.hgrm
 

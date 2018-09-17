@@ -91,25 +91,26 @@ TEMPLATES = [
 WSGI_APPLICATION = 'dashboard.wsgi.application'
 
 
+
+# Read the db engine to use
+PULSAR_DASHBOARD_DB_ENGINE = os.environ.get('PULSAR_DASHBOARD_DB_ENGINE', '')
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-#
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'USER' : 'docker',
-        'PASSWORD' : 'docker',
-        'HOST' : 'localhost',
-        'NAME' : 'pulsar_dashboard',
+if 'sqlite3' == PULSAR_DASHBOARD_DB_ENGINE:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'USER' : 'docker',
+            'PASSWORD' : 'docker',
+            'HOST' : 'localhost',
+            'NAME' : 'pulsar_dashboard',
     }
 }
 
