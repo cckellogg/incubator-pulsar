@@ -156,6 +156,7 @@ Environment variables:
    PULSAR_STANDALONE_CONF        Configuration file for standalone (default: $DEFAULT_STANDALONE_CONF)
    PULSAR_PRESTO_CONF            Configuration directory for Pulsar Presto (default: $DEFAULT_PULSAR_PRESTO_CONF)
    PULSAR_EXTRA_OPTS             Extra options to be passed to the jvm
+   PULSAR_EXTRA_ZK_OPTS          Extra options to be passed to the jvm when running zookeeper
    PULSAR_EXTRA_CLASSPATH        Add extra paths to the pulsar classpath
    PULSAR_PID_DIR                Folder where the pulsar server PID file should be stored
    PULSAR_STOP_TIMEOUT           Wait time before forcefully kill the pulsar server instance, if the stop is not successful
@@ -285,6 +286,7 @@ OPTS="$OPTS -Dpulsar.functions.python.instance.file=${PY_INSTANCE_FILE}"
 OPTS="$OPTS -Dpulsar.functions.extra.dependencies.dir=${FUNCTIONS_EXTRA_DEPS_DIR}"
 
 ZK_OPTS=" -Dzookeeper.4lw.commands.whitelist=*"
+ZK_OPTS="$ZK_OPTS $PULSAR_EXTRA_ZK_OPTS"
 
 #Change to PULSAR_HOME to support relative paths
 cd "$PULSAR_HOME"
